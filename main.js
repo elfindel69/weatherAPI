@@ -36,10 +36,10 @@ function prepareContent() {
          case "Drizzle" : body.classList.toggle("rainy"); break;
          case "Clear" : body.classList.toggle("sunny"); break;
          case "Rain" : body.classList.toggle("rainy"); break;
-         case "Extreme" : body.classList.toggle("stormy"); break;
+         case "Thunderstorm" : body.classList.toggle("stormy"); break;
          case "Snow" : body.classList.toggle("snowy"); break;
          case "Fog" : body.classList.toggle("fog"); break;
-         default: body.classList.toggle("sunny")
+         default: body.classList.toggle("cloudy")
      }
 }
 
