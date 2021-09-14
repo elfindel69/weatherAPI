@@ -6,7 +6,8 @@ const btnCurrentTown = document.querySelector("#currentTown")
 let data = {}
 
 const token = "6c8b1266b8ebf8e85b0fcacc35019009"
-const bonus_token = "74d59e5414ffd312ada485046e8d73ff"
+const bonus_token = "94f2728004614480bbe8c9744d68a142"
+
 let ip = ""
 
 
@@ -62,11 +63,12 @@ function getCityByIp(ip) {
     let state = ""
     let country = ""
     let req = new XMLHttpRequest();
-    req.open("GET",`http://api.ipstack.com/${ip}?access_key=${bonus_token}`)
+    req.open("GET",`https://api.ipgeolocation.io/ipgeo?apiKey=${bonus_token}&ip=${ip}`)
     req.onload =()=>{
        let data_bonus=JSON.parse(req.responseText)
+
         country = data_bonus.country_name;
-        state = data_bonus.region_code;
+        state = data_bonus.state_prov;
         city = data_bonus.city;
         let coordinates = city+","+state+","+country
         getWeather(coordinates);
