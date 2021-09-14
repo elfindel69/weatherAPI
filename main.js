@@ -27,16 +27,19 @@ function prepareContent() {
     `;
 
      content.innerHTML  = contentHTML;
-    body.classList = []
+     if(body.classList.length > 0){
+         let elem = body.classList.item(0)
+         body.classList.remove(elem)
+     }
      switch (data.weather[0].main){
-         case "Clouds" : body.classList.add("cloudy"); break;
-         case "Drizzle" : body.classList.add("rainy"); break;
-         case "Clear" : body.classList.add("sunny"); break;
-         case "Rain" : body.classList.add("rainy"); break;
-         case "Extreme" : body.classList.add("stormy"); break;
-         case "Snow" : body.classList.add("snowy"); break;
-         case "Fog" : body.classList.add("fog"); break;
-         default: body.classList.add("sunny")
+         case "Clouds" : body.classList.toggle("cloudy"); break;
+         case "Drizzle" : body.classList.toggle("rainy"); break;
+         case "Clear" : body.classList.toggle("sunny"); break;
+         case "Rain" : body.classList.toggle("rainy"); break;
+         case "Extreme" : body.classList.toggle("stormy"); break;
+         case "Snow" : body.classList.toggle("snowy"); break;
+         case "Fog" : body.classList.toggle("fog"); break;
+         default: body.classList.toggle("sunny")
      }
 }
 
