@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: navy;
+}
+
+h1,h2{
+    text-align: center
+}
+
+div{
+    width: 70%;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+}
+
+ #content{
+     border: 1px solid navy;
+     border-radius: 10px;
+ }
+.sunny{
+    background: url("images/soleil.jpg") no-repeat center ;
+    background-size: cover;
+
+}
+
+.cloudy{
+    background:url("images/nuages.jpeg") no-repeat center ;
+    background-size: cover;
+    color:black;
+}
+
+.rainy{
+    background:url("images/pluie.jpg") no-repeat center ;
+    background-size: cover;
+}
+
+.stormy{
+    background:url("images/orage.jpg") no-repeat center ;
+    background-size: cover;
+}
+
+.snowy{
+    background:url("images/neige.jpg") no-repeat center ;
+    background-size: cover;
+}
+
+.fog{
+    background:url("images/brouillard.jpg") no-repeat center ;
+    background-size: cover;
+    color: wheat;
+}
