@@ -84,9 +84,17 @@ function getIPAddress() {
     };
     req.send();
 }
+    body.onload = function(){
+        document.getElementById("data").style.display = "none";
+        console.log("test")
+        document.getElementById("loader").style.display = "block";
+    };
 
-{
-    getIPAddress()
-    btnGo.addEventListener("click",()=>getWeather(inputCity.value))
-    btnCurrentTown.addEventListener("click",()=>getIPAddress())
-}
+    window.addEventListener("load", function(){
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("data").style.display = "block";
+        getIPAddress()
+        btnGo.addEventListener("click",()=>getWeather(inputCity.value))
+        btnCurrentTown.addEventListener("click",()=>getIPAddress())
+    });
+
