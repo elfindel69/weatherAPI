@@ -45,7 +45,7 @@ function prepareContent() {
 
 function getWeather(city){
     let req = new XMLHttpRequest();
-    req.open("GET",`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${token}&units=metric&lang=fr`)
+    req.open("GET",`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${token}&units=metric&lang=fr`)
     req.onload =()=>{
         const h2 = document.querySelector("h2")
         h2.textContent = city
@@ -76,7 +76,7 @@ function getCityByIp(ip) {
 
 function getIPAddress() {
     let req = new XMLHttpRequest();
-    req.open("GET",`http://api.ipify.org`)
+    req.open("GET",`https://api.ipify.org`)
     req.onload =()=>{
        ip=(req.responseText)
 
